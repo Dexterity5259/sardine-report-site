@@ -199,6 +199,7 @@ nav {
 .about {
   background: var(--cream);
   padding: 80px 40px;
+  border-top: 1px solid var(--line);
 }
 .about-inner {
   max-width: 560px;
