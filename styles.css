@@ -47,7 +47,7 @@ nav {
   color: var(--muted);
   letter-spacing: 0.02em;
 }
-.nav-links a:hover { color: var(--aqua-deep); }
+.nav-links a:hover { color: var(--tangerine); }
 .nav-cta {
   background: var(--aqua-deep);
   color: var(--cream) !important;
@@ -65,6 +65,9 @@ nav {
   padding: 90px 40px 70px;
   max-width: 720px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero-eyebrow {
   font-size: 11px;
@@ -110,7 +113,7 @@ nav {
 }
 .hero-note {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--tangerine)
 }
 
 /* ===== SECTIONS STRIP ===== */
@@ -270,6 +273,14 @@ footer .foot-links {
   flex-wrap: wrap;
 }
 footer .foot-links a:hover { color: var(--aqua-deep); }
+
+/* Small tangerine accent dot before section eyebrows */
+.latest-heading .eyebrow::before,
+.about .eyebrow::before {
+  content: "● ";
+  color: var(--tangerine);
+  font-size: 8px;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
