@@ -55,14 +55,45 @@
   </div>
 </div>
 
-<!-- Feed embed code -->
-<div data-supascribe-embed-id="203363801209" data-supascribe-feed></div>
+<!-- RSS Feed code -->
+<div id="issue-feed">
+    <div class="issue-card"><p>Loading latest dispatches&hellip;</p></div>
+  </div>
 
+  <script>
+    (function () {
+      var feedUrl = "https://thesardinereport.substack.com/feed";
+      var apiUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedUrl) + "&count=3";
+      var container = document.getElementById("issue-feed");
 
-<!-- Supascribe Script -->
-<script src="https://js.supascribe.com/v1/loader/9eQqEw9BZHYTFEf8WfvNplhWDEg1.js" async></script>
+      fetch(apiUrl)
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.status !== "ok" || !data.items || data.items.length === 0) {
+            throw new Error("no items");
+          }
+          container.innerHTML = "";
+          data.items.forEach(function (item, index) {
+            var plainText = item.description.replace(/<[^>]*>/g, "");
+            var excerpt = plainText.length > 220 ? plainText.slice(0, 220) + "\u2026" : plainText;
+            var dateStr = new Date(item.pubDate).toLocaleDateString("en-US", { month: "short", day: "numeric" });
 
-</div>
+            var card = document.createElement("div");
+            card.className = "issue-card";
+            if (index > 0) card.style.marginTop = "24px";
+            card.innerHTML =
+              '<div class="issue-tag">' + dateStr + '</div>' +
+              '<h3>' + item.title + '</h3>' +
+              '<p>' + excerpt + '</p>' +
+              '<a class="issue-read" href="' + item.link + '" target="_blank" rel="noopener">Read the full dispatch &rarr;</a>';
+            container.appendChild(card);
+          });
+        })
+        .catch(function () {
+          container.innerHTML = '<div class="issue-card"><p>Couldn\'t load recent dispatches right now &mdash; <a class="issue-read" href="https://thesardinereport.substack.com" target="_blank" rel="noopener">visit the Substack directly</a>.</p></div>';
+        });
+    })();
+  </script>
 
 <!-- ABOUT -->
 <div class="about" id="about">
