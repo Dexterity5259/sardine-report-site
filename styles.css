@@ -67,7 +67,7 @@ nav {
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 90px 40px 70px;
+  padding: 70px 40px 50px;
   max-width: 720px;
   margin: 0 auto;
   display: flex;
@@ -147,7 +147,7 @@ nav {
 
 /* ===== LATEST ISSUE ===== */
 .latest {
-  padding: 70px 56px;
+  padding: 50px 56px;
 }
 .latest-heading {
   text-align: center;
