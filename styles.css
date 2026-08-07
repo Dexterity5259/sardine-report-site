@@ -113,7 +113,7 @@ nav {
 }
 .hero-note {
   font-size: 12px;
-  color: var(--tangerine)
+  color: var(--muted)
 }
 
 /* ===== SECTIONS STRIP ===== */
@@ -272,15 +272,8 @@ footer .foot-links {
   letter-spacing: 0.03em;
   flex-wrap: wrap;
 }
-footer .foot-links a:hover { color: var(--aqua-deep); }
+footer .foot-links a:hover { color: var(--tangerine); }
 
-/* Small tangerine accent dot before section eyebrows */
-.latest-heading .eyebrow::before,
-.about .eyebrow::before {
-  content: "● ";
-  color: var(--tangerine);
-  font-size: 8px;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
