@@ -197,7 +197,7 @@ nav {
 
 /* ===== ABOUT ===== */
 .about {
-  background: var(--cream-warm);
+  background: var(--cream);
   padding: 80px 40px;
 }
 .about-inner {
