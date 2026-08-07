@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recommendations — The Sardine Report</title>
+<meta name="description" content="Books, music, and movies feeding the world of the novel.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .rec-hero {
+    text-align: center;
+    padding: 70px 40px 50px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .rec-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+  .rec-hero p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .rec-section {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+    border-top: 1px solid var(--line);
+  }
+  .rec-section:first-of-type { border-top: none; }
+  .rec-section-label {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--aqua-deep);
+    margin-bottom: 28px;
+  }
+  .rec-item {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 30px;
+    align-items: baseline;
+  }
+  .rec-item:last-child { margin-bottom: 0; }
+  .rec-item .rec-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    min-width: 220px;
+  }
+  .rec-item .rec-note {
+    font-size: 14px;
+    color: #4A5957;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .rec-item { flex-direction: column; gap: 4px; }
+    .rec-item .rec-title { min-width: unset; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-mark">
+    <svg viewBox="0 0 256 256"><path d="M40 118 Q98 78 128 118 T216 118" fill="none" stroke="#2E7C82" stroke-width="8"/><path d="M40 138 Q98 98 128 138 T216 138" fill="none" stroke="#2E7C82" stroke-width="8" opacity="0.4"/></svg>
+    <span class="nav-name">Sardine Report</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://thesardinereport.substack.com/archive" target="_blank" rel="noopener">Archive</a>
+    <a href="/#about">About</a>
+    <a href="/recommendations.html">Recommendations</a>
+  </div>
+  <a class="nav-cta" href="https://thesardinereport.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
+</nav>
+
+<div class="rec-hero">
+  <div class="hero-eyebrow">Research &amp; Inspiration</div>
+  <h1>Recommendations</h1>
+  <p>Books, music, and films feeding the world of the novel — and whatever else has drifted through along the way.</p>
+</div>
+
+<!-- BOOKS -->
+<div class="rec-section">
+  <div class="rec-section-label">Books</div>
+
+  <div class="rec-item">
+    <div class="rec-title">Powers of Horror &mdash; Julia Kristeva</div>
+    <div class="rec-note">Endeared to and frustrated by Lacanian theory in equal measure. Still working through it, slowly.</div>
+  </div>
+
+  <div class="rec-item">
+    <div class="rec-title">Goddesses in Everywoman &mdash; Jean Shinoda Bolen</div>
+    <div class="rec-note">Greek mythology meets Jungian psychoanalysis. Currently having a Persephone moment.</div>
+  </div>
+
+  <div class="rec-item">
+    <div class="rec-title">An Illustrated Encyclopedia of Traditional Symbols &mdash; J.C. Cooper</div>
+    <div class="rec-note">The symbol Bible. Watch this space.</div>
+  </div>
+
+</div>
+
+<!-- FILM & TV -->
+<div class="rec-section">
+  <div class="rec-section-label">Watching</div>
+
+  <div class="rec-item">
+    <div class="rec-title">Lanvin Spring/Summer 2006</div>
+    <div class="rec-note">Alber Elbaz's runway collection. Research for an important shopping spree in the manuscript.</div>
+  </div>
+
+  <div class="rec-item">
+    <div class="rec-title">Alber Elbaz documentary</div>
+    <div class="rec-note">He's a delight. Genuinely.</div>
+  </div>
+
+</div>
+
+<!-- MUSIC -->
+<div class="rec-section">
+  <div class="rec-section-label">Listening</div>
+
+  <div class="rec-item">
+    <div class="rec-title">More coming soon</div>
+    <div class="rec-note">This shelf is still filling in &mdash; check back.</div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <svg class="foot-mark" viewBox="0 0 256 256"><path d="M40 118 Q98 78 128 118 T216 118" fill="none" stroke="#2E7C82" stroke-width="8"/><path d="M40 138 Q98 98 128 138 T216 138" fill="none" stroke="#2E7C82" stroke-width="8" opacity="0.4"/></svg>
+  <div class="tagline">fellow sardines, welcome &mdash; the water is warm</div>
+  <div class="foot-links">
+    <a href="https://thesardinereport.substack.com" target="_blank" rel="noopener">Substack</a>
+    <a href="https://instagram.com/thesardinereport" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://tiktok.com/@thesardinereport" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://x.com/sardinereports" target="_blank" rel="noopener">X</a>
+    <a href="mailto:thesardinereport@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
